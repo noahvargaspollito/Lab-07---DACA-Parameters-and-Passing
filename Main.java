@@ -55,27 +55,32 @@ public class Main
         //OUTPUT SECTION
         System.out.println(formatCard(surname,givenName,category,cardNum,birthCountry,termsAndConditions,sex,uscisNum,dateOfBirth,validDate,expireDate));
     }
-    public static String formatCard(String surname, String givenName, String category, String cardNum, String birthCountry, String termsAndConditions, char sex, String uscisNum, String dateOfBirth, String validDate, String expireDate){
+    public static String formatCard(String surname, String givenName,
+                                    String category, String cardNum, String birthCountry,
+                                    String termsAndConditions, char sex, String uscisNum,
+                                    String dateOfBirth, String validDate, String expireDate){
+
         String card;
-        card = String.format("╔══════════════════════════════════════════════════════════════════════╗\n");
-        card += String.format("║%35s%35s║\n", TITLE_USA, "");
-        card += String.format("║%60s%10s║\n", TITLE_EAC, "");
-        card += String.format("║%-25s%-45s║\n", "", LABEL_SURNAME);
-        card += String.format("║%-25s%-45s║\n", "", surname);
-        card += String.format("║%-25s%-45s║\n", ASCII_ART_0, LABEL_GIVEN_NAME);
-        card += String.format("║%-25s%-45s║\n", ASCII_ART_1, givenName);
-        card += String.format("║%-25s%-15s%-15s%-15s║\n", ASCII_ART_2, LABEL_USCIS_NUM, LABEL_CATEGORY, LABEL_CARD_NUM);
-        card += String.format("║%-25s%-15s%-15s%-15s║\n", ASCII_ART_3, uscisNum, category, cardNum);
-        card += String.format("║%-25s%-45s║\n", ASCII_ART_4, LABEL_BIRTH_COUNTRY);
-        card += String.format("║%-25s%-45s║\n", ASCII_ART_5, birthCountry);
-        card += String.format("║%-25s%-45s║\n", ASCII_ART_6, LABEL_TERMS_CONDITIONS);
-        card += String.format("║%-25s%-45s║\n", ASCII_ART_7, termsAndConditions);
-        card += String.format("║%-25s%-15s%-30s║\n", ASCII_ART_8, LABEL_BIRTH_DATE, LABEL_SEX);
-        card += String.format("║%-25s%-15s%-30s║\n", ASCII_ART_9, dateOfBirth, String.valueOf(sex));
-        card += String.format("║%-25s%-15s%-30s║\n", "", LABEL_VALID_DATE, validDate);
-        card += String.format("║%-25s%-15s%-30s║\n", "", LABEL_EXPIRE_DATE, expireDate);
-        card += String.format("║%-25s%-45s║\n", ASCII_CREDIT, LABEL_REENTRY_DISCLAIMER);
-        card += String.format("╚══════════════════════════════════════════════════════════════════════╝\n");
+
+        card = String.format("╔══════════════════════════════════════════════════════════════════════╗%n");
+        card += String.format("║%35s%35s║%n", TITLE_USA, "");
+        card += String.format("║%60s%10s║%n", TITLE_EAC, "");
+        card += String.format("║%-25s%-45s║%n", "", LABEL_SURNAME);
+        card += String.format("║%-25s%-45s║%n", "", surname);
+        card += String.format("║%-25s%-45s║%n", ASCII_ART_0, LABEL_GIVEN_NAME);
+        card += String.format("║%-25s%-45s║%n", ASCII_ART_1, givenName);
+        card += String.format("║%-25s%-15s%-15s%-15s║%n", ASCII_ART_2, LABEL_USCIS_NUM, LABEL_CATEGORY, LABEL_CARD_NUM);
+        card += String.format("║%-25s%-15s%-15s%-15s║%n", ASCII_ART_3, uscisNum, category, cardNum);
+        card += String.format("║%-25s%-45s║%n", ASCII_ART_4, LABEL_BIRTH_COUNTRY);
+        card += String.format("║%-25s%-45s║%n", ASCII_ART_5, birthCountry);
+        card += String.format("║%-25s%-45s║%n", ASCII_ART_6, LABEL_TERMS_CONDITIONS);
+        card += String.format("║%-25s%-45s║%n", ASCII_ART_7, termsAndConditions);
+        card += String.format("║%-25s%-15s%-30s║%n", ASCII_ART_8, LABEL_BIRTH_DATE, LABEL_SEX);
+        card += String.format("║%-25s%-15s%-30s║%n", ASCII_ART_9, dateOfBirth, sex);
+        card += String.format("║%-25s%-15s%-30s║%n", "", LABEL_VALID_DATE, validDate);
+        card += String.format("║%-25s%-15s%-30s║%n", "", LABEL_EXPIRE_DATE, expireDate);
+        card += String.format("║%-25s%-45s║%n", ASCII_CREDIT, LABEL_REENTRY_DISCLAIMER);
+        card += String.format("╚══════════════════════════════════════════════════════════════════════╝%n");
         return card;
     }
 
